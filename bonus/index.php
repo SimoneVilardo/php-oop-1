@@ -25,10 +25,6 @@
             }
         }
 
-        // Metodo per ottenere il prezzo del biglietto
-        function getPrezzo(){
-            return $this->prezzo_biglietto;
-        }
     }
 
     // Creazione delle istanze di film
@@ -51,7 +47,7 @@
     echo "<h4>Genere:</h4>".$film1->genere;
     echo "<h4>Anno:</h4>".$film1->anno;
     echo "<h4>Voto:</h4>".$film1->voto;
-    echo "<h4>Prezzo:</h4>".$film1->getPrezzo()."€";
+    echo "<h4>Prezzo:</h4>".$film1->prezzo_biglietto."€";
     echo "<pre>";
 
     echo "<h2>Film 2:</h2>";
@@ -59,7 +55,7 @@
     echo "<h4>Genere:</h4>".$film2->genere;
     echo "<h4>Anno:</h4>".$film2->anno;
     echo "<h4>Voto:</h4>".$film2->voto;
-    echo "<h4>Prezzo:</h4>".$film1->getPrezzo()."€";
+    echo "<h4>Prezzo:</h4>".$film1->prezzo_biglietto."€";
     echo "<pre>";
 
     echo "<h2>Film 3:</h2>";
@@ -67,7 +63,7 @@
     echo "<h4>Genere:</h4>".$film3->genere;
     echo "<h4>Anno:</h4>".$film3->anno;
     echo "<h4>Voto:</h4>".$film3->voto;
-    echo "<h4>Prezzo:</h4>".$film3->getPrezzo()."€";
+    echo "<h4>Prezzo:</h4>".$film3->prezzo_biglietto."€";
     echo "<pre>";
 
     echo "<h2>Film 4:</h2>";
@@ -75,7 +71,7 @@
     echo "<h4>Genere:</h4>".$film4->genere;
     echo "<h4>Anno:</h4>".$film4->anno;
     echo "<h4>Voto:</h4>".$film4->voto;
-    echo "<h4>Prezzo:</h4>".$film4->getPrezzo()."€";
+    echo "<h4>Prezzo:</h4>".$film4->prezzo_biglietto."€";
 ?>
 
 <!DOCTYPE html>
