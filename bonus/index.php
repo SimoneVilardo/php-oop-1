@@ -9,7 +9,7 @@
         public $prezzo_biglietto;
         
         // Costruttore della classe
-        function __construct($titolo, $genere, $anno, $voto,){
+        function __construct($titolo, Array $genere, $anno, $voto,){
             $this->titolo = $titolo;
             $this->genere = $genere;
             $this->anno = $anno;
@@ -28,23 +28,23 @@
     }
 
     // Creazione delle istanze di film
-    $film1 = new Movie('Avatar', 'Fantascienza', '2009', 4);
+    $film1 = new Movie('Avatar', ['Fantascienza', 'Azione'], '2009', 4);
     $film1->setVote(10);
 
-    $film2 = new Movie('Io Sono Leggenda', 'Horror', '2007', 5);
+    $film2 = new Movie('Io Sono Leggenda', ['Horror', 'Azione'], '2007', 5);
     $film2->setVote(10);
 
-    $film3 = new Movie('Ragazzi della notte', 'Comico', '1995', 2);
+    $film3 = new Movie('Ragazzi della notte', ['Comico'], '1995', 2);
     $film3->setVote(10);
 
-    $film4 = new Movie('Shaolin Soccer', 'Fantascienza', '2001', 2);
+    $film4 = new Movie('Shaolin Soccer', ['Fantascienza', 'Azione'], '2001', 2);
     $film4->setVote(10);
 
     // Stampare le informazioni sui film
     echo "<pre>";
     echo "<h2>Film 1:</h2>";
     echo "<h4>Titolo:</h4>".$film1->titolo;
-    echo "<h4>Genere:</h4>".$film1->genere;
+    echo "<h4>Genere:</h4>".$film1->genere[0]." ".$film1->genere[1];
     echo "<h4>Anno:</h4>".$film1->anno;
     echo "<h4>Voto:</h4>".$film1->voto;
     echo "<h4>Prezzo:</h4>".$film1->prezzo_biglietto."€";
@@ -52,7 +52,7 @@
 
     echo "<h2>Film 2:</h2>";
     echo "<h4>Titolo:</h4>".$film2->titolo;
-    echo "<h4>Genere:</h4>".$film2->genere;
+    echo "<h4>Genere:</h4>".$film2->genere[0]." ".$film2->genere[1];
     echo "<h4>Anno:</h4>".$film2->anno;
     echo "<h4>Voto:</h4>".$film2->voto;
     echo "<h4>Prezzo:</h4>".$film1->prezzo_biglietto."€";
@@ -60,7 +60,7 @@
 
     echo "<h2>Film 3:</h2>";
     echo "<h4>Titolo:</h4>".$film3->titolo;
-    echo "<h4>Genere:</h4>".$film3->genere;
+    echo "<h4>Genere:</h4>".$film3->genere[0];
     echo "<h4>Anno:</h4>".$film3->anno;
     echo "<h4>Voto:</h4>".$film3->voto;
     echo "<h4>Prezzo:</h4>".$film3->prezzo_biglietto."€";
@@ -68,7 +68,7 @@
 
     echo "<h2>Film 4:</h2>";
     echo "<h4>Titolo:</h4>".$film4->titolo;
-    echo "<h4>Genere:</h4>".$film4->genere;
+    echo "<h4>Genere:</h4>".$film1->genere[0]." ".$film1->genere[1];
     echo "<h4>Anno:</h4>".$film4->anno;
     echo "<h4>Voto:</h4>".$film4->voto;
     echo "<h4>Prezzo:</h4>".$film4->prezzo_biglietto."€";
